@@ -17,6 +17,13 @@ const data = [
         image: require('../Images/Mechanic.jpeg'),
         screen:'MapScreen',
     },
+     {
+        id:"157",
+        title:"Need First Aid?",
+        image:require('../Images/firstAid.jpeg'),
+        screen:'MapScreen',
+        // screen:'BeautianScreen',
+    },
     {
         id:"456",
         title:"book a beautian",
@@ -24,13 +31,7 @@ const data = [
         screen:'MapScreen',
         // screen:'BeautianScreen',
     },
-    {
-        id:"789",
-        title:"Need First Aid?",
-        image:require('../Images/first Aid.jpeg'),
-        screen:'MapScreen',
-        // screen:'BeautianScreen',
-    }
+   
 ]
 
 const NavOptions = () => {
@@ -48,8 +49,7 @@ const NavOptions = () => {
              onPress={()=>navigation.navigate(item.screen)}
                 style={tw`p-2 pl-4 pb-4 pt-4 bg-gray-200 m-2`}
             // disabled={!origin}
-            >
-           
+            >           
             <View style={tw`flex-row items-center`}>
                 <Image 
                  style={{width:100, height:100, resizeMode:'contain'}}
@@ -59,19 +59,15 @@ const NavOptions = () => {
                  <Text style={tw`mt-2 font-semibold`}>
                     {item.title}
                 </Text>
-                 {/* <View style={tw`flex-row items-center`}> */}
+
                 <Icon 
                 style={tw`p-2 bg-black rounded-full w-10 mt-2`}
                 name ="arrowright" color='white' type='antdesign' />
                 </View> 
-                </View> 
-            {/* </View> */}
+                </View>
             </TouchableOpacity>
         )}
     />
-    // <View>
-    //   <Text>NavOptions</Text>
-    // </View>
   )
 }
 

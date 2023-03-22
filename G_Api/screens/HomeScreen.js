@@ -8,17 +8,15 @@ import {Provider, useDispatch } from 'react-redux';
 import {setDestination,setOrigin} from "../slices/navSlice";
 import { Store } from 'redux';
 import { store } from '../store';
-// console.log(GOOGLE_MAPS_APIKEY)
 
 
-const HomeScreen = () => {
-  
+const HomeScreen = () => {  
  
   const dispatch=useDispatch();
   
   return (
     <SafeAreaView style={tw `bg-white h-full`}>
-      {/* <Text style={tw `text-red-500 p-10`}>I am HomeScreen</Text> */}
+     
 
       <View style = {tw `p-8 `}>
         <Image 
@@ -28,12 +26,13 @@ const HomeScreen = () => {
             innerHeight:50,
             outerHeight:100,
             resizeMode:'contain',
-        }}
+        }}          
 
         source={require('../Images/HelpMe.png')}        
         />
+        <Text style={tw `text-red-500 pl-20 text-lg bg-green-500`}>I am HomeScreen</Text> 
         <GooglePlacesAutocomplete
-          placeholder='where from?'
+          placeholder='Origin?'
           styles={{
             container:{
               flex:0,

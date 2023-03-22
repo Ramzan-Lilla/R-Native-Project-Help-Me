@@ -32,7 +32,6 @@ const Map = () => {
  const popRadius = {
     latitude: origin.location.lat,
     longitude:origin.location.lng,
-    // longitude: origin?.longitude,
     radius: 1609.34, //1 mile in meters
   };
   return (
