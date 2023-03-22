@@ -56,7 +56,7 @@ const HomeScreen = () => {
 
           fetchDetails={true}
           returnKeyType={"search"}
-          enablePoweredByContainer={false}
+          enablePoweredByContainer={true}
           minLength={2}         
 
           query={{
