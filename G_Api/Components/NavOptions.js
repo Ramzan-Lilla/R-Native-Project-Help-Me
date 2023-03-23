@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View,Image } from 'react-native'
 import React from 'react'
-import { FlatList,FlatGrid } from 'react-native'
+import { FlatList } from 'react-native'
 import { TouchableOpacity } from 'react-native'
 import tw from 'tailwind-react-native-classnames'
 // import { Icon } from 'react-native-elements'
@@ -22,14 +22,14 @@ const data = [
         title:"Need First Aid?",
         image:require('../Images/firstAid.jpeg'),
         screen:'MapScreen',
-        // screen:'BeautianScreen',
+        
     },
     {
         id:"456",
-        title:"book a beautian",
-        image:require('../Images/palor.jpeg'),
+        title:"book a beautician",
+        image:require('../Images/parlour.jpeg'),
         screen:'MapScreen',
-        // screen:'BeautianScreen',
+        // screen:'beauticianScreen',
     },
    
 ]

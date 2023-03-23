@@ -8,7 +8,7 @@ const NavigateCard = () => {
   //   <View>
   //     <Text>NavigateCard</Text>
   //   </View>
-  // )
+  // )}
 
 
 
@@ -116,7 +116,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   }, 
-  
 });
 
 export default NavigateCard

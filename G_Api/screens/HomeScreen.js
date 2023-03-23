@@ -1,4 +1,4 @@
-import {StyleSheet, View, Text,SafeAreaView,Image } from 'react-native'
+import {StyleSheet, View, Text,SafeAreaView,Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import tw from 'tailwind-react-native-classnames'
 import NavOptions from '../Components/NavOptions'
@@ -10,7 +10,7 @@ import { Store } from 'redux';
 import { store } from '../store';
 
 
-const HomeScreen = () => {  
+const HomeScreen = ({navigation}) => {  
  
   const dispatch=useDispatch();
   
@@ -19,7 +19,8 @@ const HomeScreen = () => {
      
 
       <View style = {tw `p-8 `}>
-        <Image 
+      <View>
+          <Image 
         style={{
             innerWidth:50,
             outerWidth:100,
@@ -30,6 +31,19 @@ const HomeScreen = () => {
 
         source={require('../Images/HelpMe.png')}        
         />
+
+<TouchableOpacity
+        style={{ position: 'absolute', top: 0, right: 0 }}
+        onPress={() => navigation.navigate('CustomerProfile')}
+      >
+        <Image
+          style={{ width: 50, height: 50, resizeMode: 'contain' }}
+          source={require('../Images/Profile.png')}
+        />
+      </TouchableOpacity>
+        
+      </View>
+       
         <Text style={tw `text-red-500 pl-20 text-lg bg-green-500`}>I am HomeScreen</Text> 
         <GooglePlacesAutocomplete
           placeholder='Origin?'
