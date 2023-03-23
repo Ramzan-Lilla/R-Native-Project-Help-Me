@@ -36,7 +36,7 @@ const [checkBox1, setCheckBox1] = useState(false);
   };
 
   const handlePlaceRequest = () => {
-    // Do something when the "Place Request" button is pressed
+    // A Sync Request will be generated to the vendor side of App
   };
 
   return (
