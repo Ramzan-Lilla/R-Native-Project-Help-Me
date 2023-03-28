@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     container: {
       backgroundColor: 'blue',
       justifyContent:'center',
-      height: 400,
+      height: 350,
       borderRadius: 50,
       marginHorizontal: 10,
       marginVertical: 30,
@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
       borderRadius: 20,
     },
     TextInput: {
+      paddingLeft:5,
       height: 40,
       borderColor: '#fff',
       color: '#fff',

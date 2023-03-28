@@ -1,10 +1,39 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { StyleSheet, Text, View, TouchableOpacity, Image,SafeAreaView } from 'react-native';
+import VenProfileButton from './VenProfileButton';
 
-export default function set_profile({navigation}) {
+export default function set_profile({}) {
+
   return (
+    <SafeAreaView>    
     <View>
-      <Text>Set Profile</Text>
-    </View>
-  )
+      <TouchableOpacity style={styles.container}>
+        <Image
+          source={require('../Images/Profile.png')}
+          style={styles.image}
+        />
+      </TouchableOpacity>
+<VenProfileButton/>
+ 
+</View>
+</SafeAreaView>
+
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    // flex: 1,
+    marginTop:10,
+    alignItems: 'center',
+    // justifyContent: 'center',
+    backgroundColor: '#FFFFFF',
+    height:230,
+  },
+  image: {
+    marginTop:0,
+    width: '50%',
+    height: '100%',
+    resizeMode: 'contain',
+  },
+});

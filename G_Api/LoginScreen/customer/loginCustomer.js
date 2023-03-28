@@ -68,13 +68,13 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'blue',
     justifyContent:'center',
-    height: 300,
+    height: 270,
     borderRadius: 50,
     marginHorizontal: 10,
     marginVertical: 30,
   },
   text: {
-    height:230,
+    height:190,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   TextInput: {
+    paddingLeft:5,
     height: 40,
     borderColor: '#fff',
     color: '#fff',
