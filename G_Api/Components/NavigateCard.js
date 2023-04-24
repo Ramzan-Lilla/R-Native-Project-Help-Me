@@ -1,16 +1,9 @@
 import React, { useState } from 'react';
-import {StyleSheet, View, Text, Image, TextInput, TouchableOpacity,FlatList } from 'react-native';
+import {StyleSheet, View, Text, Image, TextInput, TouchableOpacity,FlatList,  } from 'react-native';
 import { CheckBox } from '@rneui/base';
-
+// import CheckBox from '@react-native-community/checkbox';
 
 // const NavigateCard = () => {
-//   // return (
-//   //   <View>
-//   //     <Text>NavigateCard</Text>
-//   //   </View>
-//   // )}
-
-
 
 // const [isChecked1, setIsChecked1] = useState(false);
 //   const [isChecked2, setIsChecked2] = useState(false);
@@ -135,7 +128,7 @@ const NavigateCard = () => {
         data={services}
         renderItem={({ item }) => (
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <CheckBox value={item.selected} onValueChange={() => handleServiceSelect(item.id)} />
+            <CheckBox disabled={false} value={item.selected} onValueChange={() => handleServiceSelect(item.id)} />
             <Text style={{ marginLeft: 10 }}>{item.title}</Text>
           </View>
         )}
@@ -207,5 +200,3 @@ const styles = StyleSheet.create({
 });
 
 export default NavigateCard
-
-// const styles = StyleSheet.create({})
