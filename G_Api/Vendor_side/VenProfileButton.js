@@ -1,7 +1,9 @@
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import React, { useState } from 'react';
-
+import { useNavigation } from '@react-navigation/native';
 const VenProfileButton = () => {
+const navigation = useNavigation();
+
   const [showDropdown, setShowDropdown] = useState(false);
   const [showRequest, setShowRequest] = useState(false);
 
@@ -42,6 +44,11 @@ const VenProfileButton = () => {
     // Handle processing action here
     console.log('Ranking');
   };
+
+  const handleLogout = () => {
+    navigation.navigate('Login');
+  };
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 const [showUpdatePassword, setShowUpdatePassword] = useState(false);
@@ -106,7 +113,7 @@ const [showUpdatePassword, setShowUpdatePassword] = useState(false);
         </View>
       )}
 
-       <TouchableOpacity style={styles.button}>
+       <TouchableOpacity style={styles.button}  onPress={handleLogout}>
         <Text style={styles.buttonText}>Logout</Text>
       </TouchableOpacity>
     </ScrollView>

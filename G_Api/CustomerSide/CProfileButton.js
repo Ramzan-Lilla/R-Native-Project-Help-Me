@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const CProfileButton = () => {
-
+const navigation = useNavigation();
   const [showDropdown, setShowDropdown] = useState(false);
   const [showRequest, setShowRequest] = useState(false);
 
@@ -42,6 +43,10 @@ const CProfileButton = () => {
   const handleProcessing = () => {
     // Handle processing action here
     console.log('Processing');
+  };
+
+  const handleLogout = () => {
+    navigation.navigate('Login');
   };
 
   return (
@@ -86,7 +91,7 @@ const CProfileButton = () => {
         </View>
       )}
 
-      <TouchableOpacity style={styles.button} >
+      <TouchableOpacity style={styles.button}  onPress={handleLogout}> 
         <Text style={styles.buttonText}>Logout</Text>
       </TouchableOpacity>
     </ScrollView>

@@ -22,6 +22,7 @@ import get_customer from './Vendor_side/Get-Customer';
 import check_history from './Vendor_side/check-history';
 import set_profile from './Vendor_side/set-profile';
 import CustomerProfile from './CustomerSide/CustomerProfile';
+import CProfileButton from './CustomerSide/CProfileButton';
 
 export default function App() {
   const stack = createNativeStackNavigator();
@@ -73,6 +74,7 @@ export default function App() {
       <stack.Screen name='check_history' component={check_history}  options={{
         headerTitle:"Check History"
       }}/>
+
       <stack.Screen name='set_profile' component={set_profile}  options={{
         headerTitle:"Set profile"
       }}/>
