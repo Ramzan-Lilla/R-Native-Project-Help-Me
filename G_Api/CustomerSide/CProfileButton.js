@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { auth } from '../Firebase/FBCustAuth';
-import {  onAuthStateChanged, signOut, sendPasswordResetEmail,} from 'firebase/auth';
 
 import { useEffect } from 'react';
 
@@ -17,24 +15,6 @@ const navigation = useNavigation();
 
   const toggleRequest = () => {
     setShowRequest(!showRequest);
-  };
-
-  const handleUpdatePassword = async () => {
-
-    try {
-    await sendPasswordResetEmail(auth, email);
-    setSubmitted(true);
-    setError(null);
-    alert('Password Reset link has been sent')
-  } catch (error) {
-    if (error.code === 'auth/user-not-found') {
-      setError('User not found');
-    } else {
-      setError('There was a problem with your request');
-    }
-  }
-    // Handle update password action here
-    // console.log('Update password');
   };
 
   useEffect
@@ -76,7 +56,7 @@ const navigation = useNavigation();
 
       {showDropdown && (
         <View>
-          <TouchableOpacity style={styles.subButton} onPress={handleUpdatePassword}>
+          <TouchableOpacity style={styles.subButton} onPress={() => navigation.navigate('Cust_ResetPassword')}>
             <Text style={styles.subButtonText}>Update Password</Text>
           </TouchableOpacity>
 

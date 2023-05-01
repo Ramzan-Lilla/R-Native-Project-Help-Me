@@ -69,7 +69,7 @@ export default function Customer({navigation}) {
         </View>
       </View>
         <View>
-        <TouchableOpacity style={styles.Reset} onPress={() => navigation.navigate('ResetPassword')}>
+        <TouchableOpacity style={styles.Reset} onPress={() => navigation.navigate('Cust_ResetPassword')}>
             <Text>Reset Password</Text>
         </TouchableOpacity>
       </View>

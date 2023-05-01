@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 import { sendPasswordResetEmail } from 'firebase/auth';
-import { auth } from '../Firebase/FBCustAuth'; // assuming this is where you initialize Firebase Auth
+import { auth } from '../../Firebase/FBVendorAuth'; // assuming this is where you initialize Firebase Auth
 
-const ResetPassword = ({ setScreen }) => {
+const vend_RestPassword = ({ setScreen }) => {
   // define state variables for email, error message, and submission status
   const [email, setEmail] = useState('');
   const [error, setError] = useState(null);
@@ -45,14 +45,13 @@ const ResetPassword = ({ setScreen }) => {
               autoCapitalize="none"
               placeholderTextColor="#aaa"
               style={styles.input}
-            />
-            <View>
-                <Button style={styles.Reset} title="Reset Password" onPress={resetUserPassword} disabled={!email} />
-            </View>
-            
+            />            
           </>
         )}
       </View>
+            <View>
+                <Button style={styles.Reset} title="Reset Password" onPress={resetUserPassword} />
+            </View>
     </View>
   );
 };
@@ -87,11 +86,13 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     marginTop:10,
     paddingHorizontal:20,
+    width:'50%',
+    marginLeft:'25%',
     paddingVertical:15,
     backgroundColor:'#8585e0',
-    borderRadius:50,
+    borderRadius:'50px',
     marginHorizontal:70
   },
 });
 
-export default ResetPassword;
+export default vend_RestPassword;

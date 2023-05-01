@@ -23,7 +23,8 @@ import check_history from './Vendor_side/check-history';
 import set_profile from './Vendor_side/set-profile';
 import CustomerProfile from './CustomerSide/CustomerProfile';
 import CProfileButton from './CustomerSide/CProfileButton';
-import ResetPassword from './screens/ResetPassword';
+import Cust_ResetPassword from './LoginScreen/customer/Cust_ResetPassword';
+import vend_RestPassword from './LoginScreen/Vendor/vend_RestPassword';
 
 export default function App() {
   const stack = createNativeStackNavigator();
@@ -36,8 +37,6 @@ export default function App() {
       <stack.Screen name="Welcome" component={Welcome} options={{
         headerShown: false
       }}  />
-
-
       
  <stack.Screen
          name='Login' component={ButtonScreen}
@@ -80,9 +79,17 @@ export default function App() {
         headerTitle:"Set profile"
       }}/>
 
-      <stack.Screen name='ResetPassword' component={ResetPassword}  options={{
+      <stack.Screen name='Cust_ResetPassword' component={Cust_ResetPassword}  options={{
         headerTitle:"ResetPassword"
       }}/>
+
+    <stack.Screen name='CProfileButton' component={CProfileButton}  options={{
+            headerTitle:"CProfileButton"
+          }}/>
+
+    <stack.Screen name='vend_RestPassword' component={vend_RestPassword}  options={{
+            headerTitle:"RestPassword"
+          }}/>
 
 {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
         <stack.Screen

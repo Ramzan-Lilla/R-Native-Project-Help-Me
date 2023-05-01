@@ -15,11 +15,6 @@ const navigation = useNavigation();
     setShowRequest(!showRequest);
   };
 
-  const handleUpdatePassword = () => {
-    // Handle update password action here
-    console.log('Update password');
-  };
-
   const handleChangeUsername = () => {
     // Handle change username action here
     console.log('Change username');
@@ -76,7 +71,7 @@ const [showUpdatePassword, setShowUpdatePassword] = useState(false);
 {/* //~~~~~~~~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!!!! */}
       {showDropdown && (
         <View>
-          <TouchableOpacity style={styles.subButton} onPress={handleUpdatePassword}>
+          <TouchableOpacity style={styles.subButton} onPress={() => navigation.navigate('vend_RestPassword')}>
             <Text style={styles.subButtonText}>Update Password</Text>
           </TouchableOpacity>
 

@@ -68,6 +68,12 @@ export default function Vendor({navigation}) {
         </View>
       </View>
       
+      <View>
+        <TouchableOpacity style={styles.Reset} onPress={() => navigation.navigate('vend_RestPassword')}>
+            <Text>Reset Password</Text>
+        </TouchableOpacity>
+      </View>
+
       <View style={styles.text}>
         <Text>I Don't have an Account</Text>
         <TouchableOpacity style={styles.textButton} onPress={() => navigation.navigate('vendorSignUp')}>
