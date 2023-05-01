@@ -17,8 +17,8 @@ export default function CustomerSignUp({navigation}) {
 }
 function checkPassword(firstpassword,secondpassword) {
   if(firstpassword !== secondpassword){
-    setValidationMessage('Password do not match') 
-    // Alert('Password do not match')
+    console.log('Password do not match')
+    alert('Password do not match')
   }
   else setValidationMessage('')
 }
@@ -30,7 +30,7 @@ function checkPassword(firstpassword,secondpassword) {
       await createUserWithEmailAndPassword(auth, email, password);
       navigation.navigate('Customer');
     } catch (error) {
-      setValidationMessage(error.message);
+      alert(error.message);
     }
   }
 

@@ -12,7 +12,7 @@ export default function Customer({navigation}) {
   
   async function login() {
     if (email === '' || password === '') {
-      setvalidationMessage('required filled missing')
+      alert('required filled missing')
       return;
     }
 
@@ -20,7 +20,7 @@ export default function Customer({navigation}) {
       await signInWithEmailAndPassword(auth,email, password);
       navigation.navigate('HomeScreen');
     } catch (error) {
-     setvalidationMessage(error.message);
+     alert(error.message);
     }
   }
 

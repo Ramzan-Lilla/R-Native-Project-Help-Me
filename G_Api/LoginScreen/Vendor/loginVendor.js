@@ -12,7 +12,7 @@ export default function Vendor({navigation}) {
   
   async function login() {
     if (email === '' || password === '') {
-      setvalidationMessage('required filled missing')
+      alert('required filled missing')
       return;
     }
 
@@ -20,7 +20,7 @@ export default function Vendor({navigation}) {
       await signInWithEmailAndPassword(auth,email, password);
       navigation.navigate('HomeVendor');
     } catch (error) {
-     setvalidationMessage(error.message);
+     alert(error.message);
     }
   }
   return (
