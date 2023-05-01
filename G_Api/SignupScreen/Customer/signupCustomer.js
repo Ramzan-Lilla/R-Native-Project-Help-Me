@@ -27,7 +27,7 @@ function checkPassword(firstpassword,secondpassword) {
     ? setValidationMessage('required filled missing')
     : ''
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      await createUserWithEmailAndPassword(auth, email, password)
       navigation.navigate('Customer');
     } catch (error) {
       alert(error.message);

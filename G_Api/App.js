@@ -23,6 +23,7 @@ import check_history from './Vendor_side/check-history';
 import set_profile from './Vendor_side/set-profile';
 import CustomerProfile from './CustomerSide/CustomerProfile';
 import CProfileButton from './CustomerSide/CProfileButton';
+import ResetPassword from './screens/ResetPassword';
 
 export default function App() {
   const stack = createNativeStackNavigator();
@@ -79,6 +80,9 @@ export default function App() {
         headerTitle:"Set profile"
       }}/>
 
+      <stack.Screen name='ResetPassword' component={ResetPassword}  options={{
+        headerTitle:"ResetPassword"
+      }}/>
 
 {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
         <stack.Screen

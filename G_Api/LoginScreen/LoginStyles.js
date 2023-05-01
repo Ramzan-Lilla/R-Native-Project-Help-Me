@@ -20,10 +20,11 @@ const styles = StyleSheet.create({
     marginVertical: 30,
   },
   text: {
-    height:190,
+    height:140,
     justifyContent: 'center',
     alignItems: 'center',
   },
+
   textButton: {
     paddingHorizontal: 20,
     paddingVertical: 10,
@@ -48,6 +49,17 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     marginTop:30,
+    paddingHorizontal:20,
+    paddingVertical:15,
+    backgroundColor:'#8585e0',
+    borderRadius:50,
+    marginHorizontal:70
+  },
+
+  Reset:{
+    alignItems:'center',
+    justifyContent:'center',
+    marginTop:10,
     paddingHorizontal:20,
     paddingVertical:15,
     backgroundColor:'#8585e0',

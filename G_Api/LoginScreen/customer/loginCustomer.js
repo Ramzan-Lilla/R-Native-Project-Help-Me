@@ -36,7 +36,7 @@ export default function Customer({navigation}) {
       <View style={styles.container}>
         <View style={styles.containerTextInput}>
           <TextInput
-            placeholder="Enter Name or Email"
+            placeholder="Enter Email"
             style={styles.TextInput}
             placeholderTextColor="#fff"
             value={email}
@@ -60,14 +60,18 @@ export default function Customer({navigation}) {
         
         {<Text style={styles.error}>{validationMessage}</Text>}
 
-        <View style={styles.submitButton}>
+        <View>
             <TouchableOpacity style={styles.submit} onPress={login}
             // onPress={() => navigation.navigate('HomeScreen')}
             >
             <Text>Submit</Text>
             </TouchableOpacity>
         </View>
-        
+      </View>
+        <View>
+        <TouchableOpacity style={styles.Reset} onPress={() => navigation.navigate('ResetPassword')}>
+            <Text>Reset Password</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.text}>
         <Text>I Don't have an Account</Text>
